@@ -1,5 +1,5 @@
 ---
-title: Git e Github
+title: Git
 subtitle: Do noob até o Wizard lv12
 author: Mateus Koppe
 ---
@@ -42,12 +42,12 @@ git config --global user.email <email>
 git init
 ```
 
-# Comandos básicos
-* add
-* status
-* commit
-* log
-* diff
+# Comandos e conceitos básicos
+* git-add
+* git-status
+* git-commit
+* git-log
+* git-diff
 
 # git-add
 ```bash
@@ -89,4 +89,55 @@ git log
 git log --oneline
 ```
 
-# 
+# Remote
+Crie um repositório online
+
+##
+* git-remote
+* git-push
+* git-pull
+* git-clone
+
+# Criando um repositório no Github
+![](./images/create-online-repo.png)
+
+# Criando um repositório no Github
+![](./images/online-repo.png)
+
+# git-remote
+```bash
+# Lista os repositórios adicionados
+git remote
+
+# Adiciona um repositório remoto
+git remote add <name> <url>
+
+# Por convenção o repositório principal geralmente
+# é nomeado como origin
+git remote add origin <url>
+```
+
+# git-push
+```bash
+# Push = Empurra
+# Envia os commits da branch selecionada
+# para o remote selecionado
+git push <remote> <branch>
+
+# O mais comum é
+git push origin master
+```
+
+# git-pull
+```bash
+# Pull = Puxa
+# Atualiza a branch selecionada de acordo com o
+# remote selecionado
+git pull <remote> <branch>
+```
+
+# git-clone
+```bash
+# Clona um repositório online
+git clone <url> [<folder>]
+```
