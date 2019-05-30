@@ -89,7 +89,51 @@ git log
 git log --oneline
 ```
 
+# Branchs
+* git-branch
+* git-checkout
+* git-stash
+* git-merge
+
+# git-branch
+```bash
+# Lista as branchs criadas e exibe a brach atual
+git branch
+
+# Cria uma nova branch baseada na branch atual
+git branch <name>
+
+# Deleta uma branch
+git branch -d <name>
+```
+
+# git-checkout
+```bash
+# Troca de branch
+git checkout <name>
+
+# Cria e troca de branch
+git checkout -b <name>
+```
+
+# git-stash
+```bash
+# Salva as mudanças de uma branch e reseta-a
+git stash
+
+# Retorna as mudanças que foram salvas para a branch
+git stash apply
+```
+
+# git-merge
+```bash
+# Junta os commits da branch atual com a branch alvo
+git merge <name>
+```
+
 # Remote
+Git não faria sentido se não ouvesse uma forma de armazenar os repositório em algum lugar onde possa ser compartilhado para outras pessoas.
+
 Crie um repositório online
 
 ##
