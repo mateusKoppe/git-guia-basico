@@ -10,6 +10,11 @@ author: Mateus Koppe
 
 Foi criado em 2005 por Linus Torval para o versionalmento do kernel Linux e foi rapidamente adotado por outros projetos.
 
+# Sobre a apresentação
+
+O repositório está na URL
+https://github.com/mateusKoppe/git-basic-guide
+
 # Como instalar
 
 ## Debians based
@@ -35,6 +40,9 @@ Não sei, procura lá
 git config --global user.name <name>
 git config --global user.email <email>
 ```
+
+# Sobre `--global`
+Utilize apenas no seu computador pessoal, caso você queria definir a configuração apenas para um repositório específico use `--local` (já é o padrão)
 
 # Criando um repositório
 ```bash
@@ -184,4 +192,18 @@ git pull <remote> <branch>
 ```bash
 # Clona um repositório online
 git clone <url> [<folder>]
+```
+
+# Gitignore
+Caso seja necessário que o repositório ignore algum arquivo ou algumas pasta é possível criar um `.gitignore`, nele você insere quais arquivos deverão ser ignoradas no repositório.
+
+# Variável HEAD
+Reflete o branch e commit atual.
+Você também pode utilizar `~<n>` para referenciar commits anteriores.
+
+```
+# Macetes
+git push origin HEAD
+
+git reset --head HEAD~1
 ```
