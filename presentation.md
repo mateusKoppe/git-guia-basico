@@ -64,7 +64,7 @@ Quando você executar esse comando uma pasta `.git` será criada no diretório e
 # Um pouco do conceito
 O git funciona com base em snapshots, que armazenam as modificações que foram feitas ao longo do projeto.
 
-Essas snapshots agem como "fotografias" que irão salvar o estado do projeto naquele momento, e então irão salvar essas mudanças em um commit.
+Essas snapshots agem como "fotografias" que salvam o estado do projeto naquele momento, e então irão aplicar essas mudanças em um commit.
 ![Exemplo de snapshot](./images/snapshots.png)
 
 # Setup
@@ -178,22 +178,114 @@ git log --graph
 git log --oneline --graph # Why not both?
 ```
 
-# git diff
-```bash
-# Exibe as diferenças que não foram adicionadas
-git diff
+# Remote
+Git não faria sentido se não houvesse uma forma de compartilhar o repositório com outras pessoas.
 
-# Exibe as que foram adicionadas:
-git diff --cached
+Neste momento iremos aprender sobre repositórios remotos e os seguinte comandos:
+
+* `git remote`
+* `git push`
+* `git pull`
+* `git clone`
+
+# Repositório remoto
+Um repositório remoto é o local que irá centralizar as informações do seu repositório e poderá ser utilizado em conjunto com mais desenvolvedores.
+
+Existem vários serviços que nos dão acesso a repositório remotos, os mais populares são:
+
+* [BitBucket](https://bitbucket.com)
+* [GitHub](https://github.com)
+* [GitLab](https://gitlab.com)
+
+Nesta lição utilizaremos o Github pois ele é nele que estão a maior parte dos projetos open-source.
+
+# Repositório remoto
+
+Repositório remotos também nos dão acesso a algumas funcionalidades que não teriamos em outros cenários, essas funcionalidades variam de serviço em serviço e são armazenadas somente no repositório remoto do serviço.
+
+A maioria dessas funcionalidades torno de gestão de projeto e coolaboração e não possuem um padrão ou alguma ligação direta com o projeto git.
+
+Alguns exemplos de funcionalidades:
+
+- Pull Requests
+- Code Reviews
+- Forks
+- Wikis
+- Issues
+- Entre outros
+
+# Repositório remoto
+
+A maioria dos projetos open-source utilizam dessas ferramentas para manter o projeto organizado e facilitar na contribução de pessoas que desejam ajudar.
+
+Obs: Agora você não tem mais desculpas para confundir Git com Github ;)
+
+# Criando um repositório no Github
+![Criando um repositório](./images/create-online-repo.png)
+
+# Criando um repositório no Github
+![Repositório criado](./images/online-repo.png)
+
+# git remote
+Depois de criado o repositório remoto precisamos informar ao nosso repositório local qual é a url que iremos utilizar.
+
+```bash
+# Lista os repositórios adicionados
+git remote -v
+
+# Adiciona um repositório remoto
+git remote add <nome> <url>
+
+# Por convenção o repositório principal geralmente
+# é nomeado como origin
+git remote add origin <url>
+```
+
+# git push
+Agora que está o remote configurado é só mandar os seus commits para o repositório remoto.
+
+Para isso utiliza `git push`.
+```bash
+# Push = Empurra
+# Envia os commits da branch selecionada
+# para o remote selecionado
+git push <remote> <branch>
+
+# O mais comum é
+git push origin master
+```
+
+# git pull
+> E se o repositório remoto tiver commits que eu ainda não tenho?
+
+Nesse caso é utilizado git pull:
+
+```bash
+# Pull = Puxa
+# Atualiza a branch selecionada de acordo com o
+# remote selecionado
+git pull <remote> <branch>
+```
+
+# git clone
+Se quando tudo estiver pronto você quiser utilizar esse repositório em outro computador, ou testar o repositório do seu amigo, é só utilizar `git clone` ;)
+
+```bash
+# Clona um repositório online
+git clone <url> [<pasta destino>]
 ```
 
 # Branchs
-* git-branch
-* git-checkout
-* git-stash
-* git-merge
+Branchs são bifurcações no seu códigos, você pode utilizar branchs para isolar o código e trabalhar em um "local" difente da master até que o seu código esteja pronto, e assim que tudo estiver ok você mandar para a master, garantindo assim que a master sempre estará estável e com um número menor de bugs.
 
-# git-branch
+Além disso é uma forma execelente de trabalhar em equipe, asim cada membro trabalha na sua branch até que a funcionalidade da branch estiver concluída.
+
+* `git branch`
+* `git checkout`
+* `git stash`
+* `git merge`
+
+# git branch
 ```bash
 # Lista as branchs criadas e exibe a brach atual
 git branch
@@ -205,7 +297,7 @@ git branch <name>
 git branch -d <name>
 ```
 
-# git-checkout
+# git checkout
 ```bash
 # Troca de branch
 git checkout <name>
@@ -214,7 +306,19 @@ git checkout <name>
 git checkout -b <name>
 ```
 
-# git-stash
+# git merge
+```bash
+# Junta os commits da branch atual com a branch alvo
+git merge <name>
+```
+
+# git fetch
+Quando você quiser buscar as branchs de algum remote utilize git fetch:
+```
+git fetch <remove>
+```
+
+# git stash
 ```bash
 # Salva as mudanças de uma branch e reseta-a
 git stash
@@ -223,65 +327,33 @@ git stash
 git stash apply
 ```
 
-# git-merge
+# Comandos úteis
+Da para se virar sem mas é sempre bom saber
+
+# git diff
+Exibe as diferenças de acordo com o último commit
+
 ```bash
-# Junta os commits da branch atual com a branch alvo
-git merge <name>
+git diff
+
+# Exibe as que foram adicionadas:
+git diff --cached
 ```
 
-# Remote
-Git não faria sentido se não houvesse uma forma de armazenar os repositório em algum lugar onde possa ser compartilhado para outras pessoas.
+# git show
+Mostra as modificações feitas em determinado commit
 
-Crie um repositório online
-
-##
-* git-remote
-* git-push
-* git-pull
-* git-clone
-
-# Criando um repositório no Github
-![](./images/create-online-repo.png)
-
-# Criando um repositório no Github
-![](./images/online-repo.png)
-
-# git-remote
 ```bash
-# Lista os repositórios adicionados
-git remote
-
-# Adiciona um repositório remoto
-git remote add <name> <url>
-
-# Por convenção o repositório principal geralmente
-# é nomeado como origin
-git remote add origin <url>
+git show <hash do commit>
 ```
 
-# git-push
-```bash
-# Push = Empurra
-# Envia os commits da branch selecionada
-# para o remote selecionado
-git push <remote> <branch>
+# git reset --hard
+Caso você queira voltar, tanto o código quanto o histórico para um commit antigo utilize `git reset --hard`
 
-# O mais comum é
-git push origin master
-```
+CUIDADO: Quando você faz isso você perde os commits e todo o códigos que estava nele.
 
-# git-pull
 ```bash
-# Pull = Puxa
-# Atualiza a branch selecionada de acordo com o
-# remote selecionado
-git pull <remote> <branch>
-```
-
-# git-clone
-```bash
-# Clona um repositório online
-git clone <url> [<folder>]
+git reset --hard <hash do commit>
 ```
 
 # Gitignore
