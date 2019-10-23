@@ -284,6 +284,8 @@ Além disso é uma forma execelente de trabalhar em equipe, asim cada membro tra
 * `git checkout`
 * `git stash`
 * `git merge`
+* `git fetch`
+* `git stash`
 
 # git branch
 ```bash
@@ -356,16 +358,21 @@ CUIDADO: Quando você faz isso você perde os commits e todo o códigos que esta
 git reset --hard <hash do commit>
 ```
 
+# git config credential
+Toda vez que você executar um comando remoto que precisa de suas credenciais você precisará informar o seu login e sua senha.
+
+Caso você esteja de saco cheio disso você pode configurar o git para salvar suas credênciais, para isso execute: 
+```bash
+git config --global credential.helper store
+```
+
 # Gitignore
 Caso seja necessário que o repositório ignore algum arquivo ou algumas pasta é possível criar um `.gitignore`, nele você insere quais arquivos deverão ser ignoradas no repositório.
 
 # Variável HEAD
 Reflete o branch e commit atual.
-Você também pode utilizar `~<n>` para referenciar commits anteriores.
+Você também pode utilizar `~<n>` para referenciar um número de commits anteriores.
 
 ```
-# Macetes
 git push origin HEAD
-
-git reset --head HEAD~1
 ```
