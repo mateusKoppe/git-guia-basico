@@ -4,6 +4,13 @@ subtitle: Do noob até o Wizard lv12
 author: Mateus Koppe
 ---
 
+# Por que aprender git?
+- Ferramenta de controle de versão
+- Ótimo para trabalhar em equipe
+- Uma ótima forma de backup
+- Ajuda a deixar o código mais estável
+- Muito melhor que salvar código em GDrive ou Dropbox
+
 # Um pouco de história
 
 ![Linus Torval criador do Git](./images/torval.jpg)
@@ -12,28 +19,37 @@ Foi criado em 2005 por Linus Torval para o versionalmento do kernel Linux e foi 
 
 # Sobre a apresentação
 
-O repositório está na URL
-https://github.com/mateusKoppe/git-basic-guide
+## Slides
+https://github.com/mateusKoppe/git-guia-basico
+
+## Links (muito) úteis
+- https://github.github.com/training-kit/downloads/pt_BR/github-git-cheat-sheet.pdf
+- https://github.github.com/training-kit/downloads/pt_BR/github-git-cheat-sheet/
+
+# Um pouco sobre bash
+```
+pwd # Exibe o diretório atual
+ls # Lista os arquivos e pastas no diretório
+mkdir <pasta> # Cria um diretório
+cd <pasta> # Entra no diretório informada
+mv <antigo> <novo> # Renomea um arquivo ou diretório
+```
 
 # Como instalar
 
-## Debians based
+## Linux
 ```
-sudo apt install git
-```
-
-## Red-Hat based
-```
-sudo dnf install git
+sudo apt install git # Debian based
 ```
 
-## Arch based
+
+## Mac
 ```
-sudo pacman -S git
+brew install git
 ```
 
 ## Windows
-Não sei, procura lá
+Baixe o executável no site oficial e instale
 
 # Setup
 ```bash
@@ -140,7 +156,7 @@ git merge <name>
 ```
 
 # Remote
-Git não faria sentido se não ouvesse uma forma de armazenar os repositório em algum lugar onde possa ser compartilhado para outras pessoas.
+Git não faria sentido se não houvesse uma forma de armazenar os repositório em algum lugar onde possa ser compartilhado para outras pessoas.
 
 Crie um repositório online
 
