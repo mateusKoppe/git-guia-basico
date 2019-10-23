@@ -7,15 +7,15 @@ subtitle: Do noob até o Wizard lv12
 - Ferramenta de controle de versão
 - Ótimo para trabalhar em equipe
 - Uma ótima forma de backup
-- Ajuda a deixar o código mais estável
 - Mantem o histórico de tudo
 - Muito melhor que salvar código em GDrive ou Dropbox
 - É de longe a ferramente mais adotada para versionamento no meio open-source
+- Para ser o/a top da balada
 
 # Um pouco de história
 ![Linus Torval criador do Git](./images/torval.jpg)
 
-Foi criado em 2005 por Linus Torval para o versionalmento do kernel Linux após desentendimento com a empresa responsável pelo DVCS. Foi rapidamente adotado por outros projetos.
+Foi criado em 2005 por Linus Torval para o versionamento do kernel Linux após desentendimento com a empresa responsável pelo DVCS. Foi rapidamente adotado por outros projetos.
 
 # Sobre a apresentação
 
@@ -23,7 +23,7 @@ Foi criado em 2005 por Linus Torval para o versionalmento do kernel Linux após 
 [github.com/mateusKoppe/git-guia-basico](https://github.com/mateusKoppe/git-guia-basico)
 
 ## Links (muito) úteis
-- [git-scm.com/book/pt-br/v2](https://git-scm.com/book/pt-br/v2)
+- [git-scm.com/book/pt-br/v1](https://git-scm.com/book/pt-br/v1)
 - [github.github.com/training-kit/downloads/pt_BR/github-git-cheat-sheet.pdf](https://github.github.com/training-kit/downloads/pt_BR/github-git-cheat-sheet.pdf)
 - [github.github.com/training-kit/downloads/pt_BR/github-git-cheat-sheet/](https://github.github.com/training-kit/downloads/pt_BR/github-git-cheat-sheet/)
 
@@ -53,6 +53,8 @@ Baixe o executável no site oficial e instale
 
 # Criando um repositório
 Repositório é o local onde você armazenará e versionará o seu código.
+
+Navege até o diretório do seu projeto e digite:
 ```bash
 # Inicia um repositório vazio
 git init
@@ -62,7 +64,7 @@ Quando você executar esse comando uma pasta `.git` será criada no diretório e
 # Um pouco do conceito
 O git funciona com base em snapshots, que armazenam as modificações que foram feitas ao longo do projeto.
 
-Essas snapshots agem como "fotografias" que irão salvar o estado do projeto naquele momento para o salvar em formato de um commit.
+Essas snapshots agem como "fotografias" que irão salvar o estado do projeto naquele momento, e então irão salvar essas mudanças em um commit.
 ![Exemplo de snapshot](./images/snapshots.png)
 
 # Setup
@@ -101,7 +103,7 @@ Os arquivos no seu repositório estarão em um dos dois estados: untracket (não
 # git status
 
 ## Tracked (monitorado)
-Arquivos em tracked são os arquivos que já estavam na sua ultimo commit, ou seja, o repositório já sabe da existencia desse arquivo.
+Arquivos em tracked são os arquivos que já estavam na seu último commit, ou seja, o repositório já sabe da existencia desse arquivo.
 
 O arquivo pode estar em um dos seguintes estados: unmodified (não modificado), modified (modificado), ou staged (selecionado).
 
@@ -132,7 +134,7 @@ git add .
 ```
 
 # git reset
-Adicionei um arquivo in staged sem querer, e agora?
+> Adicionei um arquivo in staged sem querer, e agora?
 Você pode usar `git reset` para retornar um arquivo para o seu status original.
 
 Git status por padrão não irá fazer você perde código.
@@ -145,6 +147,9 @@ git reset <arquivo>
 
 # git commit
 Tudo pronto? Chegou a hora de salvar as mudanças em um commit com uma mensagem dizendo o que esse commit faz, para isso use o comando `git commit`.
+
+O commit é justamente o que da essa ideia de snapshots, será com commits que você ira salvar determinados momentos do seu código e irá "encapsular" as mudanças selecionadas.
+
 ```bash
 # Cria um commit abrindo-o em um editor
 git commit
@@ -154,7 +159,7 @@ git commit -m "<message>"
 ```
 
 # git log
-E para ver isso aí??
+> E para ver isso aí??
 
 Utilize git log para ver quais são os logs de commits do seu repositório.
 ```bash
@@ -163,6 +168,14 @@ git log
 
 # Uma linha por log
 git log --oneline
+```
+
+# Dica
+Você pode usar a flag `--oneline` para visualizar os commits em apenas uma linhas e `--graph` para visualizar o histório de commit em forma de gráfico.
+```bash
+git log --oneline
+git log --graph
+git log --oneline --graph # Why not both?
 ```
 
 # git diff
