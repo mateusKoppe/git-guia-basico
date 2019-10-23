@@ -13,9 +13,9 @@ subtitle: Do noob até o Wizard lv12
 - Para ser o/a top da balada
 
 # Um pouco de história
-![Linus Torval criador do Git](./images/torval.jpg)
+![Linus Torvalds criador do Git](./images/torvalds.jpg)
 
-Foi criado em 2005 por Linus Torval para o versionamento do kernel Linux após desentendimento com a empresa responsável pelo DVCS. Foi rapidamente adotado por outros projetos.
+Foi criado em 2005 por Linus Torvalds para o versionamento do kernel Linux após desentendimento com a empresa responsável pelo DVCS. Foi rapidamente adotado por outros projetos.
 
 # Sobre a apresentação
 
