@@ -32,8 +32,8 @@ Foi criado em 2005 por Linus Torvalds para o versionamento do kernel Linux após
 pwd # Exibe o diretório atual
 ls # Lista os arquivos e pastas no diretório
 mkdir <pasta> # Cria um diretório
-cd <pasta> # Entra no diretório informada
-mv <atual> <novo> # Renomea um arquivo ou diretório
+cd <pasta> # Entra no diretório informado
+mv <atual> <novo> # Renomeia um arquivo ou diretório
 ```
 
 # Como instalar
@@ -191,7 +191,7 @@ Neste momento iremos aprender sobre repositórios remotos e os seguinte comandos
 # Repositório remoto
 Um repositório remoto é o local que irá centralizar as informações do seu repositório e poderá ser utilizado em conjunto com mais desenvolvedores.
 
-Existem vários serviços que nos dão acesso a repositório remotos, os mais populares são:
+Existem vários serviços que nos dão acesso a repositórios remotos, os mais populares são:
 
 * [BitBucket](https://bitbucket.com)
 * [GitHub](https://github.com)
@@ -276,9 +276,9 @@ git clone <url> [<pasta destino>]
 ```
 
 # Branchs
-Branchs são bifurcações no seu códigos, você pode utilizar branchs para isolar o código e trabalhar em um "local" difente da master até que o seu código esteja pronto, e assim que tudo estiver ok você mandar para a master, garantindo assim que a master sempre estará estável e com um número menor de bugs.
+Branchs são bifurcações no seu códigos, você pode utilizar branchs para isolar o código e trabalhar em um "local" diferente da master até que o seu código esteja pronto, e assim que tudo estiver ok você pode enviar os commits para a master, garantindo assim que a master sempre estará estável.
 
-Além disso é uma forma execelente de trabalhar em equipe, asim cada membro trabalha na sua branch até que a funcionalidade da branch estiver concluída.
+Além disso é uma forma execelente de trabalhar em equipe, assim cada membro trabalha na sua branch até que a funcionalidade da branch estiver concluída.
 
 * `git branch`
 * `git checkout`
@@ -367,7 +367,7 @@ git config --global credential.helper store
 ```
 
 # Gitignore
-Caso seja necessário que o repositório ignore algum arquivo ou algumas pasta é possível criar um `.gitignore`, nele você insere quais arquivos deverão ser ignoradas no repositório.
+Caso seja necessário que o repositório ignore algum arquivo ou algumas pasta é possível criar um `.gitignore`, nele você insere quais arquivos deverão ser ignorados no repositório.
 
 # Variável HEAD
 Reflete o branch e commit atual.

@@ -12,7 +12,7 @@ make
 
 Caso você não queria utilizar o Makefile você pode utilizar Pandoc diretamente:
 ```bash
-pandoc presentation.md -t beamer -o presentation.pdf
+pandoc git-guia-basico.md -t beamer -o git-guia-basico.pdf
 ```
 
 ## Contribuindo
