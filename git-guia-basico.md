@@ -361,10 +361,11 @@ git reset --hard <hash do commit>
 # git config credential
 Toda vez que você executar um comando remoto que precisa de suas credenciais você precisará informar o seu login e sua senha.
 
-Caso você esteja de saco cheio disso você pode configurar o git para salvar suas credênciais, para isso execute: 
+Caso você esteja de saco cheio disso você pode configurar o git para salvar suas credenciais, para isso execute: 
 ```bash
 git config --global credential.helper store
 ```
+CUIDADO: Quando você faz isso você salva sua senha desencriptada no disco, protegida somente pelas permissões do sistema. Se você estiver em uma máquina pública isto não é interessante.
 
 # Gitignore
 Caso seja necessário que o repositório ignore algum arquivo ou algumas pasta é possível criar um `.gitignore`, nele você insere quais arquivos deverão ser ignorados no repositório.
