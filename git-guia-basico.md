@@ -317,7 +317,7 @@ git merge <name>
 # git fetch
 Quando você quiser buscar as branchs de algum remote utilize git fetch:
 ```
-git fetch <remove>
+git fetch <remote>
 ```
 
 # git stash
