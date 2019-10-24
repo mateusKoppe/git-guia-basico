@@ -7,9 +7,9 @@ subtitle: Do noob até o Wizard lv12
 - Ferramenta de controle de versão
 - Ótimo para trabalhar em equipe
 - Uma ótima forma de backup
-- Mantem o histórico de tudo
+- Mantém o histórico de tudo
 - Muito melhor que salvar código em GDrive ou Dropbox
-- É de longe a ferramente mais adotada para versionamento no meio open-source
+- É de longe a ferramenta mais adotada para versionamento no meio open-source
 - Para ser o/a top da balada
 
 # Um pouco de história
@@ -54,7 +54,7 @@ Baixe o executável no site oficial e instale
 # Criando um repositório
 Repositório é o local onde você armazenará e versionará o seu código.
 
-Navege até o diretório do seu projeto e digite:
+Navegue até o diretório do seu projeto e digite:
 ```bash
 # Inicia um repositório vazio
 git init
@@ -103,7 +103,7 @@ Os arquivos no seu repositório estarão em um dos dois estados: untracket (não
 # git status
 
 ## Tracked (monitorado)
-Arquivos em tracked são os arquivos que já estavam na seu último commit, ou seja, o repositório já sabe da existencia desse arquivo.
+Arquivos em tracked são os arquivos que já estavam na seu último commit, ou seja, o repositório já sabe da existência desse arquivo.
 
 O arquivo pode estar em um dos seguintes estados: unmodified (não modificado), modified (modificado), ou staged (selecionado).
 
@@ -201,9 +201,9 @@ Nesta lição utilizaremos o Github pois ele é nele que estão a maior parte do
 
 # Repositório remoto
 
-Repositório remotos também nos dão acesso a algumas funcionalidades que não teriamos em outros cenários, essas funcionalidades variam de serviço em serviço e são armazenadas somente no repositório remoto do serviço.
+Repositório remotos também nos dão acesso a algumas funcionalidades que não teríamos em outros cenários, essas funcionalidades variam de serviço em serviço e são armazenadas somente no repositório remoto do serviço.
 
-A maioria dessas funcionalidades torno de gestão de projeto e coolaboração e não possuem um padrão ou alguma ligação direta com o projeto git.
+A maioria dessas funcionalidades torno de gestão de projeto e colaboração e não possuem um padrão ou alguma ligação direta com o projeto git.
 
 Alguns exemplos de funcionalidades:
 
@@ -216,7 +216,7 @@ Alguns exemplos de funcionalidades:
 
 # Repositório remoto
 
-A maioria dos projetos open-source utilizam dessas ferramentas para manter o projeto organizado e facilitar na contribução de pessoas que desejam ajudar.
+A maioria dos projetos open-source utilizam dessas ferramentas para manter o projeto organizado e facilitar na contribuição de pessoas que desejam ajudar.
 
 Obs: Agora você não tem mais desculpas para confundir Git com Github ;)
 
@@ -278,7 +278,7 @@ git clone <url> [<pasta destino>]
 # Branchs
 Branchs são bifurcações no seu códigos, você pode utilizar branchs para isolar o código e trabalhar em um "local" diferente da master até que o seu código esteja pronto, e assim que tudo estiver ok você pode enviar os commits para a master, garantindo assim que a master sempre estará estável.
 
-Além disso é uma forma execelente de trabalhar em equipe, assim cada membro trabalha na sua branch até que a funcionalidade da branch estiver concluída.
+Além disso é uma forma excelente de trabalhar em equipe, assim cada membro trabalha na sua branch até que a funcionalidade da branch estiver concluída.
 
 * `git branch`
 * `git checkout`
@@ -295,7 +295,7 @@ git branch
 # Cria uma nova branch baseada na branch atual
 git branch <name>
 
-# Deleta uma branch
+# Remove uma branch
 git branch -d <name>
 ```
 
