@@ -266,14 +266,17 @@ Nesse caso é utilizado git pull:
 # remote selecionado
 git pull <remote> <branch>
 ```
+Uma boa prática é antes de começar a desenvolver sempre rodar um `git pull` para ter certeza que o seu código está atualizado com o repositório remoto.
 
 # git clone
-Se quando tudo estiver pronto você quiser utilizar esse repositório em outro computador, ou testar o repositório do seu amigo, é só utilizar `git clone` ;)
+Se quando tudo estiver pronto você quiser utilizar esse repositório em outro computador.
 
 ```bash
 # Clona um repositório online
 git clone <url> [<pasta destino>]
 ```
+
+Você vai utilizar `git clone` quando for testar o repositório do seu amigo ou qualquer outro que você viu no Github ;)
 
 # Branchs
 Branchs são bifurcações no seu códigos, você pode utilizar branchs para isolar o código e trabalhar em um "local" diferente da master até que o seu código esteja pronto, e assim que tudo estiver ok você pode enviar os commits para a master, garantindo assim que a master sempre estará estável.
@@ -288,36 +291,48 @@ Além disso é uma forma excelente de trabalhar em equipe, assim cada membro tra
 * `git stash`
 
 # git branch
+`git branch` é o comando que você usará para visualizar e criar branchs.
 ```bash
 # Lista as branchs criadas e exibe a brach atual
 git branch
 
 # Cria uma nova branch baseada na branch atual
-git branch <name>
+git branch <nome da branch>
 
 # Remove uma branch
-git branch -d <name>
+git branch -d <nome da branch>
 ```
 
 # git checkout
+Assim que você criar a sua branch está tudo pronto para você trocar para a nova branch, para isso utilize o comando `git checkout`.
+
 ```bash
 # Troca de branch
-git checkout <name>
+git checkout <nome da branch>
 
 # Cria e troca de branch
-git checkout -b <name>
-```
+git checkout -b <nome da branch>
+``` 
 
 # git merge
+Quando você quiser "juntar" branchs você deve utilizar `git merge`, esse comando vai basicamente puxar os commits da branch selecionada na branch atual.
+
 ```bash
 # Junta os commits da branch atual com a branch alvo
-git merge <name>
+git merge <nome da brach>
 ```
+
+# Dica
+É uma boa prática sempre que for fazer algo um pouco mais trabalhoso criar uma branch e trabalhar nela, assim você pode trabalhar em um ambiente isolado, sem medo de fazer commits e cometer erros, assim que tudo estiver pronto basta fazer o merge :D
 
 # git fetch
 Quando você quiser buscar as branchs de algum remote utilize git fetch:
 ```
 git fetch <remote>
+```
+As branchs desse remote serão criadas com o nome de <remote>/<branch>, para listar essas branchs digite:
+```
+git branch -a
 ```
 
 # git stash
