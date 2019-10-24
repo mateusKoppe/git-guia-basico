@@ -2,6 +2,8 @@
  
 Repositório com a o conteúdo de Git, em formato MD e PDF.
 
+Para acessar o conteúdo clique nos arquivos em formato PDF ou MD no repositório ou clique em [git-guia-basico.md](https://github.com/mateusKoppe/git-guia-basico/blob/master/git-guia-basico.md) para o arquivo em Markdown e [git-guia-basico.pdf](https://github.com/mateusKoppe/git-guia-basico/blob/master/git-guia-basico.pdf) para o arquivo em PDF.
+
 ## Gerando o PDF
 O PDF é gerado a partir do arquivo `git-guia-basico.md` utilizando [Pandoc](https://pandoc.org/).
 
